@@ -8,11 +8,11 @@ class CustomersController < ApplicationController
 
     @customer.save
 
-    client = Twilio::REST::Client.new(TWILIO_CONFIG['sid'], TWILIO_CONFIG['token'])
+    client = Twilio::REST::Client.new(ENV['sid'], ENV['token'])
 
     # Create and send and SMS message
     client.account.sms.messages.create(
-      from: TWILIO_CONFIG['from'],
+      from: ENV['from'],
       to: @customer.phone,
       body: 'https://goo.gl/Qn1PzK')
       redirect_to root_path

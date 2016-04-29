@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'twilio-ruby'
 
+gem 'figaro'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
