@@ -11,7 +11,7 @@ class CustomersController < ApplicationController
     client = Twilio::REST::Client.new(ENV['sid'], ENV['token'])
 
     # Create and send and SMS message
-    client.account.sms.messages.create(
+    client.account.messages.create(
       from: ENV['from'],
       to: @customer.phone,
       body: 'https://goo.gl/Qn1PzK')
