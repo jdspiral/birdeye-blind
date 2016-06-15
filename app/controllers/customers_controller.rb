@@ -14,12 +14,14 @@ class CustomersController < ApplicationController
     client.account.messages.create(
       from: ENV['from'],
       to: @customer.phone,
-      body: 'https://goo.gl/Qn1PzK', ' ', 'https://www.facebook.com/217yorktown/reviews')
+      body: ('https://goo.gl/Qn1PzK', ' ', 'https://www.facebook.com/217yorktown/reviews')
       redirect_to root_path
   end
 
 
-private
+
+  private
+  
   def customer_params
     params.require(:customer).permit(:name, :phone)
   end
