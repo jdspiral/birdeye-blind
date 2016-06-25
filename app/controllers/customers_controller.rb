@@ -14,7 +14,7 @@ class CustomersController < ApplicationController
     client.account.messages.create(
       from: ENV['from'],
       to: @customer.phone,
-      body: 'Hi, please review at https://goo.gl/2x0c0a'
+      body: 'Thank you for visiting Sport Clips today, please give us a review - https://goo.gl/2x0c0a'
       )
       redirect_to root_path
   end
