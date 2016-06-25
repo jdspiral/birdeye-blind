@@ -14,7 +14,7 @@ class CustomersController < ApplicationController
     client.account.messages.create(
       from: ENV['from'],
       to: @customer.phone,
-      body: 'Hi, please review at https://www.facebook.com/217yorktown/reviews'
+      body: 'Hi, please review at https://goo.gl/2x0c0a'
       )
       redirect_to root_path
   end
