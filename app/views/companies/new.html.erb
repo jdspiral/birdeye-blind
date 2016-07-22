@@ -1,0 +1,47 @@
+<div class='container'>
+  <h1>Add Company</h1>
+
+  <%= form_for(@company) do |f| %>
+    <div class="col-xs-6 first pull-left">
+      <p>
+        <%= f.label :name %><br>
+        <%= f.text_field :name, :class => 'form-control', :placeholder => 'Company Name' %>
+      </p>
+
+      <p>
+        <%= f.label :phone %><br>
+        <%= f.text_field :phone, :class => 'form-control', :placeholder => 'Company Phone' %>
+      </p>
+
+      <p>
+        <%= f.label :email %><br>
+        <%= f.email_field :email, :class => 'form-control', :placeholder => 'Company Email' %>
+      </p>
+
+      <p>
+        <%= f.label :facebook %><br>
+        <%= f.text_field :facebook, :class => 'form-control', :placeholder => 'Company Facebook Link' %>
+      </p>
+
+      <p>
+        <%= f.label :google %><br>
+        <%= f.text_field :google, :class => 'form-control', :placeholder => 'Company Google Link' %>
+      </p>
+
+      <p>
+        <%= f.label :password %><br>
+        <%= f.password_field :password, :class => 'form-control', :placeholder => 'Company Password' %>
+      </p>
+
+      <p>
+        <%= f.label :twilio_phone %><br>
+        <%= f.text_field :twilio_phone, :class => 'form-control', :placeholder => 'Twilio Phone Number' %>
+      </p>
+
+      <p>
+
+        <%= f.submit "Signup Company", class: "btn btn-primary" %>
+      </p>
+    </div>
+  <% end %>
+</div>

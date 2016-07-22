@@ -1,0 +1,26 @@
+
+
+
+<div class='container'>
+  <h1>Login</h1>
+<p id="notice"><%= notice %></p>
+  <%= form_for :session do |f| %>
+    <div class="col-xs-6 first pull-left">
+
+      <p>
+        <%= f.label :email %><br>
+        <%= f.text_field :email, :class => 'form-control', :placeholder => 'Email' %>
+      </p>
+
+      <p>
+        <%= f.label :password %><br>
+        <%= f.password_field :password, :class => 'form-control', :placeholder => 'Password' %>
+      </p>
+
+      <p>
+
+        <%= f.submit "Login", class: "btn btn-primary" %>
+      </p>
+    </div>
+  <% end %>
+</div>

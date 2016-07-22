@@ -1,20 +1,22 @@
 <div class='container'>
   <h1>Customer Review Portal</h1>
-
+<% if current_company %>
   <%= form_for @customer do |f| %>
-    <p>
-      <%= f.label :name %><br>
-      <%= f.text_field :name %>
-    </p>
+    <div class="col-xs-6 first pull-left">
+      <p>
+        <%= f.label :name %><br>
+        <%= f.text_field :name, :class => 'form-control' %>
+      </p>
 
-    <p>
-      <%= f.label :phone %><br>
-      <%= f.text_field :phone %>
-    </p>
+      <p>
+        <%= f.label :phone %><br>
+        <%= f.text_field :phone, :class => 'form-control' %>
+      </p>
 
-    <p>
-
-      <%= f.submit "Send Review Link", class: "btn btn-success" %>
-    </p>
+      <p>
+        <%= f.submit "Send Review Link", class: "btn btn-primary" %>
+      </p>
+    </div>
   <% end %>
+<% end %>
 </div>

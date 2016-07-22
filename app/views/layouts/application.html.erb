@@ -8,6 +8,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% if current_company %>
+
+<% else %>
+  <ul>
+    <!-- <li><%= link_to "User Login", '/login' %></a></li> -->
+    <li><%= link_to "Signup New Company", '/companies/signup' %></a></li>
+    <li><%= link_to "Company Log In", '/companies/login' %></li>
+  </ul>
+<% end %>
 
 <%= yield %>
 
